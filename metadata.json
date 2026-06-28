@@ -1,0 +1,6 @@
+{
+  "name": "Rhizom Template",
+  "description": "Ein minimalistisches, naturorientiertes Analyse-Template.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

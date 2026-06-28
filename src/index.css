@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-rhizom-bg: #F9F9F8;
+  --color-rhizom-main: #1C352D;
+  --color-rhizom-container: #EDF1EE;
+  --color-rhizom-accent: #C86B51;
+}
+
+body {
+  background-color: var(--color-rhizom-bg);
+  color: var(--color-rhizom-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base styling to keep things clean */
+::selection {
+  background: var(--color-rhizom-container);
+  color: var(--color-rhizom-main);
+}
+
+@media print {
+  body {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+  
+  /* Ensure backgrounds print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Hide elements not meant for print */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Avoid page breaks inside important components */
+  .cornell-node, .floating-callout {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
