@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="mt-40 bg-rhizom-container border-t border-rhizom-main/10 pt-20 pb-32 px-6">
+    <footer className="mt-40 bg-rhizom-container print:bg-transparent print:border-t-2 print:border-rhizom-main border-t border-rhizom-main/10 pt-20 pb-32 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,18 +24,18 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="bg-white p-8 md:p-12 border border-rhizom-main/10 rounded-sm shadow-sm">
+          <div className="bg-white p-8 md:p-12 border border-rhizom-main/10 rounded-sm shadow-sm print:shadow-none print:bg-transparent print:border-rhizom-main/30">
             <div className="flex items-center justify-center gap-3 mb-8">
-              <MessageCircle className="text-rhizom-accent" size={24} />
+              <MessageCircle className="text-rhizom-accent print:text-rhizom-main" size={24} />
               <h3 className="font-serif text-xl text-rhizom-main">Diskurs & Plenum</h3>
             </div>
             
             <div className="space-y-6">
-              <div className="p-4 border-l-2 border-rhizom-accent/50 bg-rhizom-bg">
+              <div className="p-4 border-l-2 border-rhizom-accent/50 bg-rhizom-bg print:bg-transparent print:border-rhizom-main/40">
                 <p className="font-sans text-sm text-rhizom-main font-medium mb-1">Frage 1</p>
                 <p className="font-sans text-sm text-rhizom-main/80">Inwiefern ist der Begriff der "Kreatur" noch zeitgemäß, wenn wir über Ökosysteme als Ganzes sprechen?</p>
               </div>
-              <div className="p-4 border-l-2 border-rhizom-accent/50 bg-rhizom-bg">
+              <div className="p-4 border-l-2 border-rhizom-accent/50 bg-rhizom-bg print:bg-transparent print:border-rhizom-main/40">
                 <p className="font-sans text-sm text-rhizom-main font-medium mb-1">Frage 2</p>
                 <p className="font-sans text-sm text-rhizom-main/80">Wenn alles Leben intrinsischen Wert hat, wie lösen wir unausweichliche Interessenskonflikte im Naturschutz?</p>
               </div>

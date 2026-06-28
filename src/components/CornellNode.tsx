@@ -19,10 +19,10 @@ export function CornellNode({ node, index }: CornellNodeProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start"
+        className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start print:flex print:flex-col"
       >
         {/* Left Offshoot: Keywords & Page */}
-        <div className="md:col-span-3 node-keywords pt-2 md:text-right flex flex-col md:items-end order-2 md:order-1">
+        <div className="md:col-span-3 node-keywords pt-2 md:text-right flex flex-col md:items-end order-1 md:order-1">
           {node.page && (
             <div className="text-xs font-sans text-rhizom-main/50 mb-3 border-b border-rhizom-main/20 inline-block pb-1">
               S. {node.page}
@@ -38,7 +38,7 @@ export function CornellNode({ node, index }: CornellNodeProps) {
         </div>
 
         {/* Central Core: Main Argument */}
-        <div className="md:col-span-6 node-content bg-rhizom-container p-8 md:p-10 rounded-sm shadow-sm order-1 md:order-2 border border-rhizom-main/5">
+        <div className="md:col-span-6 node-content bg-rhizom-container p-8 md:p-10 rounded-sm shadow-sm order-2 md:order-2 border border-rhizom-main/5 print:bg-transparent print:border-rhizom-main/30 print:shadow-none">
           <div className="space-y-6">
             <div>
               <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-rhizom-main/40 mb-2">
@@ -55,7 +55,7 @@ export function CornellNode({ node, index }: CornellNodeProps) {
               <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-rhizom-main/40 mb-2">
                 Erklärung
               </div>
-              <p className="font-sans text-sm leading-relaxed text-rhizom-main/90 line-clamp-6">
+              <p className="font-sans text-sm leading-relaxed text-rhizom-main/90 line-clamp-6 print:line-clamp-none">
                 {node.explanation}
               </p>
             </div>
@@ -67,7 +67,7 @@ export function CornellNode({ node, index }: CornellNodeProps) {
                   <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-rhizom-main/40 mb-2">
                     Beispiel
                   </div>
-                  <p className="font-sans text-sm italic leading-relaxed text-rhizom-main/80 line-clamp-6">
+                  <p className="font-sans text-sm italic leading-relaxed text-rhizom-main/80 line-clamp-6 print:line-clamp-none">
                     {node.example}
                   </p>
                 </div>
@@ -79,8 +79,8 @@ export function CornellNode({ node, index }: CornellNodeProps) {
         {/* Right Offshoot: Critique */}
         <div className="md:col-span-3 node-critique order-3 pt-6 md:pt-0">
           {node.critique && (
-            <div className="p-5 border-l-2 border-rhizom-accent/80 bg-rhizom-bg relative">
-              <div className="absolute -left-[1.5px] top-6 w-3 h-3 bg-rhizom-bg border-2 border-rhizom-accent rounded-full -translate-x-1/2"></div>
+            <div className="p-5 border-l-2 border-rhizom-accent/80 bg-rhizom-bg print:bg-transparent relative">
+              <div className="absolute -left-[1.5px] top-6 w-3 h-3 bg-rhizom-bg print:bg-white border-2 border-rhizom-accent rounded-full -translate-x-1/2"></div>
               <div className="text-[10px] font-sans tracking-[0.2em] uppercase text-rhizom-accent mb-2 font-medium">
                 Kritik / Notiz
               </div>

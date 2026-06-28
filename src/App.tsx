@@ -54,7 +54,7 @@ const MOCK_CALLOUTS: CalloutData[] = [
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-rhizom-bg font-sans text-rhizom-main overflow-x-hidden">
+    <div className="min-h-screen bg-rhizom-bg font-sans text-rhizom-main overflow-x-hidden print:bg-white print:text-black">
       <StickyHeader />
       
       <main className="relative pb-20">

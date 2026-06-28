@@ -14,8 +14,8 @@ export function FloatingCallout({ callout }: { callout: CalloutData }) {
   };
 
   const alignClass = callout.position === 'left' 
-    ? 'md:mr-auto md:ml-0 md:pr-[55%]' 
-    : 'md:ml-auto md:mr-0 md:pl-[55%]';
+    ? 'md:mr-auto md:ml-0 md:pr-[55%] print:m-0 print:p-0' 
+    : 'md:ml-auto md:mr-0 md:pl-[55%] print:m-0 print:p-0';
 
   return (
     <div className={`floating-callout w-full max-w-6xl mx-auto px-6 mb-16 z-20 relative ${alignClass}`}>
@@ -23,7 +23,7 @@ export function FloatingCallout({ callout }: { callout: CalloutData }) {
         initial={{ opacity: 0, x: callout.position === 'left' ? -20 : 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-50px" }}
-        className={`bg-white border border-rhizom-main/10 p-5 rounded-sm shadow-sm inline-block max-w-sm`}
+        className={`bg-white border border-rhizom-main/10 p-5 rounded-sm shadow-sm inline-block max-w-sm print:block print:max-w-full print:shadow-none print:bg-transparent`}
       >
         <div className="flex items-center gap-2 mb-2 border-b border-rhizom-main/5 pb-2">
           {getIcon()}

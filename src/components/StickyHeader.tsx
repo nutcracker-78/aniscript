@@ -10,7 +10,7 @@ export function StickyHeader() {
   });
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-rhizom-bg/80 backdrop-blur-sm no-print">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-rhizom-bg/80 backdrop-blur-sm print:hidden">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <h1 className="font-serif text-lg text-rhizom-main tracking-wide">
           Die Analyse
