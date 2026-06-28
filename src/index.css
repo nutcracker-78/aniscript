@@ -5,10 +5,11 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
   
-  --color-rhizom-bg: #F9F9F8;
-  --color-rhizom-main: #1C352D;
-  --color-rhizom-container: #EDF1EE;
-  --color-rhizom-accent: #C86B51;
+  --color-rhizom-bg: #1A1C19;
+  --color-rhizom-main: #FFFFFF;
+  --color-rhizom-container: #2A2C29;
+  --color-rhizom-accent: #FFCC00;
+  --color-stone: #D9D9D6;
 }
 
 body {
@@ -20,14 +21,14 @@ body {
 
 /* Base styling to keep things clean */
 ::selection {
-  background: var(--color-rhizom-container);
-  color: var(--color-rhizom-main);
+  background: var(--color-rhizom-accent);
+  color: #000000;
 }
 
 @media print {
   body {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
   }
   
   /* Ensure backgrounds print */

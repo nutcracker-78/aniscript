@@ -6,10 +6,10 @@ import type { CalloutData } from '../types';
 export function FloatingCallout({ callout }: { callout: CalloutData }) {
   const getIcon = () => {
     switch (callout.type) {
-      case 'biology': return <Leaf size={14} className="text-rhizom-main/60" />;
-      case 'legal': return <Scale size={14} className="text-rhizom-main/60" />;
-      case 'history': return <BookOpen size={14} className="text-rhizom-main/60" />;
-      default: return <Info size={14} className="text-rhizom-main/60" />;
+      case 'biology': return <Leaf size={14} className="text-black" />;
+      case 'legal': return <Scale size={14} className="text-black" />;
+      case 'history': return <BookOpen size={14} className="text-black" />;
+      default: return <Info size={14} className="text-black" />;
     }
   };
 
@@ -23,15 +23,17 @@ export function FloatingCallout({ callout }: { callout: CalloutData }) {
         initial={{ opacity: 0, x: callout.position === 'left' ? -20 : 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-50px" }}
-        className={`bg-white border border-rhizom-main/10 p-5 rounded-sm shadow-sm inline-block max-w-sm print:block print:max-w-full print:shadow-none print:bg-transparent`}
+        className={`bg-rhizom-container border-t-4 border-rhizom-accent p-6 shadow-2xl inline-block max-w-sm print:block print:max-w-full print:shadow-none print:bg-transparent print:border-black print:border-t`}
       >
-        <div className="flex items-center gap-2 mb-2 border-b border-rhizom-main/5 pb-2">
-          {getIcon()}
-          <span className="text-[10px] font-sans tracking-[0.15em] uppercase text-rhizom-main/60">
+        <div className="flex items-center gap-3 mb-4 border-b border-stone/10 pb-4 print:border-black/20">
+          <div className="w-6 h-6 bg-rhizom-accent text-black flex items-center justify-center print:bg-black print:text-white">
+            {getIcon()}
+          </div>
+          <span className="text-[10px] font-sans tracking-[0.15em] uppercase text-stone print:text-black font-medium">
             {callout.title}
           </span>
         </div>
-        <p className="font-sans text-xs leading-relaxed text-rhizom-main/80">
+        <p className="font-sans text-xs leading-relaxed text-stone print:text-black">
           {callout.content}
         </p>
       </motion.div>
